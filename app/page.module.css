@@ -1,0 +1,178 @@
+/* page.module.css */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* จัดตำแหน่งตัวหนังสือทางด้านขวา */
+  padding: 2rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+.mainText {
+  font-size: 2.55rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  margin-bottom: 2rem; /* เว้นระยะห่างระหว่างตัวหนังสือและโมเดล */
+}
+
+.header {
+  display: flex;
+  align-items: center; /* จัดแนวกลางแนวตั้ง */
+}
+
+.tilde {
+  position: absolute;
+  left: 1rem; /* กำหนดตำแหน่งจากขอบซ้ายของหน้าจอ */
+  top: 1rem; /* กำหนดตำแหน่งจากขอบบนของหน้าจอ */
+  font-size: 2.55rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+}
+
+.canvasContainer {
+  position: relative;
+  align-items: flex-start;
+  width: 900px; /* ขนาดของกรอบ */
+  height: 900px; /* ขนาดของกรอบ */
+  overflow: hidden; /* ซ่อนส่วนที่เกินกรอบ */
+  /* border: 1px solid #ccc; /* เพิ่มกรอบรอบๆ Canvas */
+}
+
+.textContainer {
+  position: relative;
+  /* ลบ left: 2rem; ออก */
+  bottom: -25rem;
+  left: 30rem;
+  color: #fff;
+  z-index: 1;
+  max-width: 300px;
+  align-self: flex-start; /* เพิ่มบรรทัดนี้เพื่อให้ container อยู่ชิดซ้าย */
+}
+
+.title {
+  font-size: 1.5rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700; /* หนักสำหรับ Title */
+}
+
+.description {
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+}
+
+.menuDots {
+  position: absolute;
+  left: -30rem; /* ตำแหน่งจากขอบซ้ายของหน้าจอ */
+  top: 2.5rem; /* ตำแหน่งจากขอบบนของหน้าจอ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(255, 255, 255);
+  
+  border-radius: 50%;
+  margin: 4px 0;
+}
+
+.dotted {
+  width: 16px;
+  height: 16px;
+  background-color: #fff; /* เพิ่ม border ที่นี่ */
+  border-radius: 50%;
+  margin: 4px 0;
+}
+
+.buttonContainer {
+  display: flex; /* ใช้ flexbox สำหรับการจัดตำแหน่งแนวนอน */
+  gap: 1rem; /* เพิ่มระยะห่างระหว่างปุ่ม */
+}
+
+.imageButton {
+  border: none; /* ลบกรอบของปุ่ม */
+  background: none; /* ลบพื้นหลังของปุ่ม */
+  padding: 0; /* ลบการจัดระยะภายใน */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อวางเหนือปุ่ม */
+  display: flex; /* ใช้ flex เพื่อจัดแนวภาพ */
+  align-items: center; /* จัดแนวกลางแนวตั้ง */
+  justify-content: center; /* จัดแนวกลางแนวนอน */
+  width: 35px; /* ขนาดของวงกลม */
+  height: 35px; /* ขนาดของวงกลม */
+  border-radius: 50%; /* ทำให้ปุ่มเป็นวงกลม */
+  background-color: #fff; /* สีพื้นหลังของวงกลม */
+  overflow: hidden; /* ซ่อนส่วนที่เกินของภาพ */
+  margin-top: 1rem; /* เพิ่มระยะห่างด้านบน */
+}
+
+
+.imageButton .image {
+  width: 90%; /* ขนาดของภาพภายในวงกลม */
+  height: 90%; /* ขนาดของภาพภายในวงกลม */
+  object-fit: cover; /* ครอบภาพให้พอดีกับขนาด */
+}
+
+.imageButton1 {
+  border: none; /* ลบกรอบของปุ่ม */
+  background: none; /* ลบพื้นหลังของปุ่ม */
+  padding: 0; /* ลบการจัดระยะภายใน */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อวางเหนือปุ่ม */
+  display: flex; /* ใช้ flex เพื่อจัดแนวภาพ */
+  align-items: center; /* จัดแนวกลางแนวตั้ง */
+  justify-content: center; /* จัดแนวกลางแนวนอน */
+  width: 35px; /* ขนาดของวงกลม */
+  height: 35px; /* ขนาดของวงกลม */
+  border-radius: 50%; /* ทำให้ปุ่มเป็นวงกลม */
+  background-color: #fff; /* สีพื้นหลังของวงกลม */
+  overflow: hidden; /* ซ่อนส่วนที่เกินของภาพ */
+  margin-top: 1rem; /* เพิ่มระยะห่างด้านบน */
+}
+
+
+.imageButton1 .image1 {
+  width: 90%; /* ขนาดของภาพภายในวงกลม */
+  height: 90%; /* ขนาดของภาพภายในวงกลม */
+  object-fit: cover; /* ครอบภาพให้พอดีกับขนาด */
+}
+
+.imageButton2 {
+  border: none; /* ลบกรอบของปุ่ม */
+  background: none; /* ลบพื้นหลังของปุ่ม */
+  padding: 0; /* ลบการจัดระยะภายใน */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อวางเหนือปุ่ม */
+  display: flex; /* ใช้ flex เพื่อจัดแนวภาพ */
+  align-items: center; /* จัดแนวกลางแนวตั้ง */
+  justify-content: center; /* จัดแนวกลางแนวนอน */
+  width: 35px; /* ขนาดของวงกลม */
+  height: 35px; /* ขนาดของวงกลม */
+  border-radius: 50%; /* ทำให้ปุ่มเป็นวงกลม */
+  background-color: #fff; /* สีพื้นหลังของวงกลม */
+  overflow: hidden; /* ซ่อนส่วนที่เกินของภาพ */
+  margin-top: 1rem; /* เพิ่มระยะห่างด้านบน */
+}
+
+
+.imageButton2 .image2 {
+  width: 70%; /* ขนาดของภาพภายในวงกลม */
+  height: 70%; /* ขนาดของภาพภายในวงกลม */
+  object-fit: cover; /* ครอบภาพให้พอดีกับขนาด */
+}
+
+.successBox {
+  position: fixed;
+  top: 20px; /* ปรับตำแหน่งที่ต้องการ */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(32, 32, 32);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
